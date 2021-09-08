@@ -46,10 +46,9 @@ defmodule RumblWeb do
   def router do
     quote do
       use Phoenix.Router
-
+      import RumblWeb.Auth, only: [authenticate_user: 2]
       import Plug.Conn
       import Phoenix.Controller
-      import RumblWeb.Auth, only: [authenticate_user: 2]
     end
   end
 
