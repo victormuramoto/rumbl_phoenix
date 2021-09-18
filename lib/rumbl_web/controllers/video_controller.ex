@@ -30,6 +30,7 @@ defmodule RumblWeb.VideoController do
 
   def show(conn, %{"id" => id}, current_user) do
     video = Multimedia.get_user_video!(current_user, id)
+
     render(conn, "show.html", video: video)
   end
 

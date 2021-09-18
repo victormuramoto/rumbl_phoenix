@@ -31,7 +31,7 @@ defmodule Rumbl.Multimedia do
   def get_user_video!(%Accounts.User{} = user, id) do
     Video
     |> user_videos_query(user)
-    |> Repo.get!(Video, id)
+    |> Repo.get!(id)
   end
 
   @doc """
